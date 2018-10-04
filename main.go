@@ -13,8 +13,7 @@ func main() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	filesDir := "public"
-	fileServer := http.StripPrefix("/assets/", http.FileServer(http.Dir(filesDir)))
+	fileServer := http.StripPrefix("/assets/", http.FileServer(http.Dir("./public/assets")))
 	r.Get("/assets/*", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Vary", "Accept-Encoding")
 		w.Header().Set("Cache-Control", "public, max-age=7776000")
@@ -26,9 +25,9 @@ func main() {
 	})
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "./public/index.html")
+		http.ServeFile(w, r, "./public/404.html")
 	})
 
-	log.Print("Server started at :3333")
+	log.Print("👉  Server started at 127.0.0.1:3333")
 	http.ListenAndServe(":3333", r)
 }
