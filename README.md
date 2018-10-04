@@ -8,3 +8,10 @@ Routing:
 
 Database
 * gorm (Go object relational mapping)
+
+
+# Article
+First install [golang](https://github.com)
+
+setup go-chi for routing
+
