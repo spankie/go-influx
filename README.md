@@ -228,6 +228,11 @@ func queryDB(cmd string) (res []client.Result, err error) {
 This function creates a client as well but this time, creates a query based on the query string passed to it.
 
 
+Screeshots:
+
+![index.html](public/screenshots/screenshot1.png)
+
+![product.html](public/screenshots/screenshot2.png)
 
 
 Dependencies:
