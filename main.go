@@ -3,6 +3,8 @@ package main
 import (
 	"net/http"
 
+	"github.com/spankie/go-web/modules/shops"
+
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	log "github.com/sirupsen/logrus"
@@ -20,9 +22,8 @@ func main() {
 		fileServer.ServeHTTP(w, r)
 	})
 
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "./public/index.html")
-	})
+	r.Get("/", shops.GetAllProducts)
+	r.Get("/product/{ID}", shops.GetProduct)
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "./public/404.html")
