@@ -28,7 +28,6 @@ func main() {
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "./public/404.html")
 	})
-
 	log.Print("👉  Server started at 127.0.0.1:3333")
 	http.ListenAndServe(":3333", r)
 }
