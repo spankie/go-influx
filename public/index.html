@@ -5,18 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/css/tachyons.min.css">
     </head>
-    <body>
+    <body class="code">
         <header class="tc pa3 blue"><h1>MY SHOP</h1></header>
         <main class="w-70 center cf">
             <div class="cf">
                 {{range .}}
-                <div class="fl w-50 dib pa2">
-                    <a href="/product/{{.ID}}">
+                <div class="fl w-50 dib pa2 grow">
+                    <a href="/product/{{.ID}}" class="no-underline">
                         <div>
                             <img alt="Product{{.ID}}" src="{{.Image}}" />
                         </div>
-                        <p>{{.Description}}</p>
                     </a>
+                    <div class="ph2">
+                        <p>{{.Name}}  ${{.Price}}</p>
+                        <p class="blue">{{.Description}}</p>
+                    </div>
                 </div>
                 {{end}}
             </div>
