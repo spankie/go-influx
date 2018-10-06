@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/css/tachyons.min.css">
+    </head>
+
+    <body class="code">
+        <header class="tc pa3 blue">
+            <h1>MY SHOP's Product</h1>
+        </header>
+        <main class="w-70 center cf">
+            <div class="cf">
+                <div class="fl w-50 dib pa2">
+                    <div class="">
+                        <img alt="Product{{.ID}}" src="{{.Image}}" />
+                    </div>
+                </div>
+                <div class="fl w-50 pa3">
+                    <p class="black-60">Name: {{.Name}}</p>
+                    <p class="black-60">Description: {{.Description}}</p>
+                    <p class="black-60">Views: <span class="blue b">{{.Views}}</span></p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
