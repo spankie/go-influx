@@ -59,8 +59,6 @@ func GetProduct(w http.ResponseWriter, r *http.Request) {
 	} else {
 		product.Views = "0"
 	}
-	// result1 map[string]string{} := result["Series"]
-	// log.Println(result["Series"])
 	err = t.Execute(w, product) // merge.
 	if err != nil {
 		log.Println(err)
