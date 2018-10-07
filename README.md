@@ -200,6 +200,12 @@ This function creates a client to connect to the database at `localhost` port `8
 
 Next a point batch is created to store points to be saved to the DB. A point is then created to store the ProductMeasurement details which includes the time of visit, the id of the product as well as the Name of the product being viewed.
 
+Here is how the DB looks like after insert:
+
+![db.png](public/screenshots/db.png)
+
+The time field is indexed and stores the exact time the product was viewed. This time can be used to query the DB for analysis.
+
 The queryDB function queries the influxDB and return the result as an array of client.Result type.
 
 ```
