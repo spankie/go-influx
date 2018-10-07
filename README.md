@@ -2,11 +2,11 @@
 
 # Article
 For this article, we need to install the following:
-- [Golang](https://golang.org/doc/install)
+- [Golang](https://golang.org/doc/install) (v1.10.2)
 
-- [influxDB](https://portal.influxdata.com/downloads#influxdb) (click on the latest version name (v1.6.3 for at the time of writing this.) and follow the instruction for installing on your operating system. it's pretty straight forward.)
+- [influxDB](https://portal.influxdata.com/downloads#influxdb) (click on the latest version name (v1.5.2 for at the time of writing this.) and follow the instruction for installing on your operating system. it's pretty straight forward.)
 
-* You can read more on using the influx CLI tool for managing influxDB [here](https://docs.influxdata.com/influxdb/v1.6/introduction/getting-started/). It uses syntax close to SQL, with some minor differences.
+* You can read more on using the influx CLI tool for managing influxDB [here](https://docs.influxdata.com/influxdb/v1.5/introduction/getting-started/). It uses syntax close to SQL, with some minor differences.
 
 We will be building a simple shop to display our cool products and take a measurement of how much visits each product get.
 
@@ -233,6 +233,24 @@ func queryDB(cmd string) (res []client.Result, err error) {
 
 This function creates a client as well but this time, creates a query based on the query string passed to it.
 
+
+These views we have saved on influxDB can be graphically analyzed using [grafana](http://docs.grafana.org/).
+
+After installing grafana from [here](http://docs.grafana.org/), set it up by following their straightfowarad guide on their website. Then do the following:
+	
+- Create a new dashboard with a graph panel
+
+- Make a query as specified in this screenshot below:
+	![query](public/screenshots/query.png)
+
+- The axes tab should look like this:
+	![axes](public/screenshots/axes.png)
+
+- Display tab should also look like this:
+	![display](public/screenshots/display.png)
+
+- Your graph should finally look like this:
+	![display](public/screenshots/graph.png)
 
 Screeshots:
 
