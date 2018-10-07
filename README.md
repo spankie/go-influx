@@ -261,8 +261,8 @@ Screeshots:
 
 Dependencies:
 
-- go-chi chi [router](https://github.com/go-chi/chi)
+- go-chi chi [router](https://github.com/go-chi/chi) This is a lightweight, idiomatic and composable router for building Go HTTP services
 
 - [InfluxDB Go Client](github.com/influxdata/influxdb/client/v2)
 
-- UI Library [tachyons.io](http://tachyons.io)
+- UI Library [tachyons.io](http://tachyons.io) is a library for creating fast loading, highly readable, and 100% responsive interfaces with as little css as possible.
