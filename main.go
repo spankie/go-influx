@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/spankie/go-web/modules/shops"
+	"github.com/spankie/go-influx/modules/shops"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
